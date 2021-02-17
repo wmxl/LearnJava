@@ -1,6 +1,5 @@
 package MultiThread.循环打印;
 
-import com.sun.xml.internal.bind.v2.model.annotation.RuntimeAnnotationReader;
 
 class MyRunable1 implements Runnable{
     private TestThread121v2 t;

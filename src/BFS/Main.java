@@ -12,10 +12,10 @@ class Node{
     }
 }
 
-public class Main {
+public class Main {//抓奶牛
+    static Queue<Node> q = new LinkedList<Node>();
     public static int[] mat = new int[100005];
     public static  int n, k;
-    static Queue<Node> q = new LinkedList<Node>();
 
     public static int bfs(int x){
 
@@ -38,7 +38,6 @@ public class Main {
                 if(next.x < 0 || next.x > 100000 ) continue;
                 if(v[next.x]) continue;
                 v[next.x] = true;
-//                System.out.println(next.x);
                 q.add(next);
             }
         }
@@ -47,11 +46,9 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         while(sc.hasNext()){
             n = sc.nextInt();
             k = sc.nextInt();
-
             System.out.println(bfs(n));
         }
     }

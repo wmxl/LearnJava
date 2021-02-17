@@ -47,5 +47,25 @@ public class TestStringBuffer {
         sb1.insert(8,"0000");
         System.out.println(sb1);
 
+
+
+        StringBuffer sb = new StringBuffer();
+        sb.append("aaa");
+        change(sb, "bb");
+        System.out.println(sb);
+
+        String ss = "aa";
+        change(ss, "bb");
+        System.out.println(ss);
+
+
     }
+
+    private static void change(StringBuffer sb, String s) {
+        sb.append(s);
+    }
+    private static void change(String sb, String s) {
+        sb = sb + s;
+    }
+
 }
