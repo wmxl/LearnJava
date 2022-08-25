@@ -14,5 +14,7 @@ public class Main4 {
     }
 }
 /*
+ public List<Integer> findKDistantIndices(int[] nums, int key, int k) {
 
+        }
  */

@@ -4,11 +4,11 @@ public class Reverse {
     public static StringBuffer myReverse(StringBuffer sb) {
         int len = sb.length();
         for (int i = 0; i < len / 2; i++) {
-            char ci = sb.charAt(i);
-            char cj = sb.charAt(len - 1 - i);
-            System.out.println(ci + " " + cj);
-            sb.setCharAt(i, cj);
-            sb.setCharAt(len - 1 - i, ci);
+            char left = sb.charAt(i);
+            char right = sb.charAt(len - 1 - i);
+//            System.out.println(left + " " + right);
+            sb.setCharAt(i, right);
+            sb.setCharAt(len - 1 - i, left);
         }
         return sb;
     }

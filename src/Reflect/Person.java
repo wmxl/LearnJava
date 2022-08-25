@@ -36,7 +36,7 @@ public class Person implements Serializable {
 
     // get/set方法
     public static void main(String[] args) throws Exception {
-        Person person = new Person("luoxn28", 23);
+        Person person = new Person("Tony", 29);
         Class clazz = person.getClass();
 
         Field[] fields = clazz.getDeclaredFields();
