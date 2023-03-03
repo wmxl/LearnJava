@@ -80,6 +80,28 @@ public class Solution {
         return list;
     }
 
+    public List<Integer> preorderTraversal4(TreeNode root) {
+        ArrayList<Integer> list = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        if(root != null) stack.add(root);
+
+        TreeNode tree;
+
+        while(!stack.isEmpty()){
+            tree = stack.pop();
+            list.add(tree.val);
+            while (tree.left != null){
+                list.add(tree.left.val);
+                stack.add(tree.left);
+                tree = tree.left;
+            }
+            if(tree.right != null)
+                stack.add(tree.right);
+        }
+        return list;
+    }
+
+
     //中序遍历-递归
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
